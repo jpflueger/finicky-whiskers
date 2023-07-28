@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'key-value-backing'
 
   workflow_dispatch:
 
@@ -17,7 +18,7 @@ permissions:
 
 jobs:
   build:
-    uses: fermyon/finicky-whiskers/.github/workflows/build.yml@main
+    uses: jpflueger/finicky-whiskers/.github/workflows/build.yml@key-value-backing
 
   deploy:
     runs-on: ubuntu-latest
